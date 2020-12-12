@@ -12,15 +12,15 @@ class ClubPost {
   final String logo;
 
   ClubPost({
-    @required this.id,
-    @required this.name,
-    @required this.type,
-    @required this.office,
-    @required this.session,
-    @required this.teacher,
-    @required this.fee,
-    @required this.introduction,
-    @required this.logo,
+    @required this.id, //社團id
+    @required this.name, //社團名稱
+    @required this.type, //社團
+    @required this.office, //社辦位置
+    @required this.session, //屆數
+    @required this.teacher, //指導老師
+    @required this.fee, //社費
+    @required this.introduction, //簡介
+    @required this.logo, //頭像,封面
   });
 
   factory ClubPost.fromJson(Map<String, dynamic> json) {

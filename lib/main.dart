@@ -11,11 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme:
-          ThemeData(primarySwatch: Colors.red, primaryColor: Colors.blueGrey, ),
-       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        primaryColor: Colors.blueGrey,
+      ),
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-       
         body: BottomNavigationController(),
       ),
     );
@@ -45,11 +46,12 @@ class _BottomNavigationControllerState
       body: pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
+          BottomNavigationBarItem(
               icon: Icon(Icons.calendar_today), title: Text('行事曆')),
-          
-          BottomNavigationBarItem(icon: Icon(Icons.terrain), title: Text("活動資訊")),
-          BottomNavigationBarItem(icon: Icon(Icons.format_list_bulleted), title: Text('社團')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.terrain), title: Text("活動資訊")),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.format_list_bulleted), title: Text('社團')),
           BottomNavigationBarItem(
               icon: Icon(Icons.business_center), title: Text('管理')),
           BottomNavigationBarItem(

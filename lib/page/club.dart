@@ -7,11 +7,10 @@ import '../club_service/club_model.dart';
 final ClubHttp clubhttp = ClubHttp();
 
 class Club extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     //    final bool alreadySaved = _saved.contains(pair);
-  //  bool alreadySaved = true;
+    //  bool alreadySaved = true;
     return Scaffold(
       appBar: AppBar(
         title: Text("社團"),
@@ -58,20 +57,16 @@ class Club extends StatelessWidget {
                       //   alreadySaved ? Icons.favorite_border : Icons.favorite,
                       //   color: alreadySaved ? Colors.red : null,
                       // ),
-                      // trailing: 
+                      // trailing:
                       //   IconButton (
                       //     icon: Icon(Icons.favorite_border),
                       //     onPressed: () {
-                            
+
                       //     }
 
                       //   ),
-                      trailing: 
-                        IconButton (
-                          icon: Icon(Icons.favorite_border),
-                          onPressed:() {}
-
-                        ),
+                      trailing: IconButton(
+                          icon: Icon(Icons.favorite_border), onPressed: () {}),
                       onTap: () => Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ClubDetail(
                                 post: post,
