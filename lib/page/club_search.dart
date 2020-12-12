@@ -14,7 +14,8 @@ class ClubSearch extends SearchDelegate<ClubPost> {
     var search = {'search': '$query'};
     var json = jsonEncode(search);
 
-    var url = 'http://140.134.79.128:40130/club';
+    // var url = 'http://140.134.79.128:40130/club';
+    var url = "http://192.168.100.54:40130/club";
     var response = await http.post(url,
         headers: {'Content-Type': 'application/json; charset=UTF-8'},
         body: json);

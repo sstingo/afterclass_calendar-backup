@@ -4,7 +4,8 @@ import 'package:http/http.dart';
 import 'activity_model.dart';
 
 class ActivityHttp {
-  final String url = "http://140.134.79.128:40130/activity";
+  // final String url = "http://140.134.79.128:40130/activity";
+  final String url = "http://192.168.100.54:40130/activity";
 
   Future<List<ActivityPost>> getActivityPost() async {
     Response res = await get(url);
