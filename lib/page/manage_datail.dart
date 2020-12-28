@@ -1,5 +1,4 @@
 import 'package:afterclass_calendar/club_service/club_http.dart';
-import 'package:afterclass_calendar/club_service/club_model.dart';
 import 'package:afterclass_calendar/page/activity_add.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +15,6 @@ class ManageDetail extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("琴韻吉他社"),
-        
       ),
       // floatingActionButton: FloatingActionButton(
       //   child: Icon(Icons.delete),

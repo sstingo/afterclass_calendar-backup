@@ -5,11 +5,11 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 
 class ActivityAdd extends StatelessWidget {
-  @override
   TextEditingController _unameController = TextEditingController();
   TextEditingController _locationController = TextEditingController();
   TextEditingController _moneyController = TextEditingController();
   var a = '';
+
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -36,6 +36,7 @@ class ActivityAdd extends StatelessWidget {
             ),
             TextField(
               controller: _moneyController,
+              // ignore: deprecated_member_use
               inputFormatters: [WhitelistingTextInputFormatter.digitsOnly],
               decoration: InputDecoration(
                   labelText: "入場費",
@@ -52,6 +53,7 @@ class ActivityAdd extends StatelessWidget {
                   'money': _moneyController.text
                 };
                 var json = jsonEncode(search);
+                // ignore: unused_local_variable
                 var response = await http.post(url,
                     headers: {
                       'Content-Type': 'application/json; charset=UTF-8'

@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:afterclass_calendar/club_service/club_model.dart';
-import 'package:afterclass_calendar/page/club.dart';
 import 'package:afterclass_calendar/page/club_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;

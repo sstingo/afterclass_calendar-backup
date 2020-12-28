@@ -47,15 +47,25 @@ class _BottomNavigationControllerState
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.calendar_today), title: Text('行事曆')),
+              icon: Icon(Icons.calendar_today),
+              // ignore: deprecated_member_use
+              title: Text('行事曆')),
           BottomNavigationBarItem(
-              icon: Icon(Icons.terrain), title: Text("活動資訊")),
+              icon: Icon(Icons.terrain),
+              // ignore: deprecated_member_use
+              title: Text("活動資訊")),
           BottomNavigationBarItem(
-              icon: Icon(Icons.format_list_bulleted), title: Text('社團')),
+              icon: Icon(Icons.format_list_bulleted),
+              // ignore: deprecated_member_use
+              title: Text('社團')),
           BottomNavigationBarItem(
-              icon: Icon(Icons.business_center), title: Text('管理')),
+              icon: Icon(Icons.business_center),
+              // ignore: deprecated_member_use
+              title: Text('管理')),
           BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle), title: Text('個人資料')),
+              icon: Icon(Icons.account_circle),
+              // ignore: deprecated_member_use
+              title: Text('個人資料')),
         ],
         currentIndex: _currentIndex, //目前選擇頁索引值
         selectedItemColor: Colors.blue[900], //選擇頁顏色
