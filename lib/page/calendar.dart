@@ -1,52 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-// void main() {
-//   return runApp(CalendarApp());
-// }
-
-/// The app which hosts the home page which contains the calendar on it.
-class Calendar extends StatelessWidget {
+class Calendar extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Table Calendar Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
-      ),
-      home: Scaffold(
-        body: MyHomePage(title: '行事曆'),
-      ),
-    );
-  }
+  _CalendarState createState() => _CalendarState();
 }
 
-/// The hove page which hosts the calendar
-class MyHomePage extends StatefulWidget {
-  /// Creates the home page to display teh calendar widget.
-  const MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class _CalendarState extends State<Calendar> {
   List<Meeting> meetings;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SfCalendar(
-      view: CalendarView.month,
-      dataSource: MeetingDataSource(_getDataSource()),
-      // by default the month appointment display mode set as Indicator, we can
-      // change the display mode as appointment using the appointment display
-      // mode property
-      monthViewSettings: MonthViewSettings(
-          appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
-    ));
+      appBar: AppBar(
+        title: Text('行事曆'),
+      ),
+      body: SfCalendar(
+        view: CalendarView.month,
+        dataSource: MeetingDataSource(_getDataSource()),
+        // by default the month appointment display mode set as Indicator, we can
+        // change the display mode as appointment using the appointment display
+        // mode property
+        monthViewSettings: MonthViewSettings(
+            appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
+      ),
+    );
   }
 
   List<Meeting> _getDataSource() {
