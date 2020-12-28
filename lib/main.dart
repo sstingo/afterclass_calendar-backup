@@ -4,6 +4,7 @@ import 'package:afterclass_calendar/page/calendar.dart';
 import 'package:afterclass_calendar/page/club.dart';
 import 'package:afterclass_calendar/page/manage.dart';
 import 'package:afterclass_calendar/page/account.dart';
+import 'package:afterclass_calendar/login/login.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: BottomNavigationController(),
+        // body: BottomNavigationController(),
+        body: Login(),
       ),
     );
   }
