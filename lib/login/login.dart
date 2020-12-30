@@ -1,3 +1,4 @@
+import 'package:afterclass_calendar/data/NidModel.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -21,23 +22,28 @@ class _Login extends State<Login> {
           // decoration: BoxDecoration(color: Colors.red), /////////////////
           child: Card(
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Column(
-                children: [
-                  //, backgroundColor: Color(0xAARRGGBB)
-                  Image.asset(
-                    "images/ic_launcher.png",
-                    width: 50,
+                padding: const EdgeInsets.all(15.0),
+                child: FlatButton(
+                  child: Column(
+                    children: [
+                      //, backgroundColor: Color(0xAARRGGBB)
+                      Image.asset(
+                        "images/ic_launcher.png",
+                        width: 50,
+                      ),
+
+                      // ListTile(
+                      //   title: Text("NID登入"),
+                      //   onTap: () {},
+                      // ),
+                      Text("NID登入", style: TextStyle(fontSize: 18)),
+                      Text("訪客登入", style: TextStyle(fontSize: 18)),
+                    ],
                   ),
-                  // ListTile(
-                  //   title: Text("NID登入"),
-                  //   onTap: () {},
-                  // ),
-                  Text("NID登入", style: TextStyle(fontSize: 18)),
-                  Text("訪客登入", style: TextStyle(fontSize: 18)),
-                ],
-              ),
-            ),
+                  onPressed: () async {
+                    NidModel.getNidInServer();
+                  },
+                )),
           ),
         ),
       ),
