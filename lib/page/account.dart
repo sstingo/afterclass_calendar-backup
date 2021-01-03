@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:afterclass_calendar/account_service/account_model.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:qr_flutter/qr_flutter.dart';
 
 class Account extends StatelessWidget {
   ScrollController scrollController = ScrollController(
@@ -102,6 +103,11 @@ class Account extends StatelessWidget {
                 ListTile(
                   leading: Icon(Icons.settings),
                   title: Text("設定"),
+                ),
+                QrImage(
+                  data: "1234567890",
+                  version: QrVersions.auto,
+                  size: 200.0,
                 ),
               ],
             ),
