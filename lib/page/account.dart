@@ -109,6 +109,35 @@ class Account extends StatelessWidget {
                   version: QrVersions.auto,
                   size: 200.0,
                 ),
+                RaisedButton(
+                  child: Text('打卡qrcode'),
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text("打卡qrcode"),
+                            actions: <Widget>[
+                              FlatButton(
+                                child: Text("OK"),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                              FlatButton(
+                                child: Text(
+                                  "CANCEL",
+                                  style: TextStyle(color: Colors.redAccent),
+                                ),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              )
+                            ],
+                          );
+                        });
+                  },
+                ),
               ],
             ),
           ),

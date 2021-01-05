@@ -18,32 +18,30 @@ class _Login extends State<Login> {
       body: Center(
         child: Container(
           width: 200,
-          height: 150,
+          height: 190,
           // decoration: BoxDecoration(color: Colors.red), /////////////////
           child: Card(
             child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: FlatButton(
-                  child: Column(
-                    children: [
-                      //, backgroundColor: Color(0xAARRGGBB)
-                      Image.asset(
-                        "images/ic_launcher.png",
-                        width: 50,
-                      ),
-
-                      // ListTile(
-                      //   title: Text("NID登入"),
-                      //   onTap: () {},
-                      // ),
-                      Text("NID登入", style: TextStyle(fontSize: 18)),
-                      Text("訪客登入", style: TextStyle(fontSize: 18)),
-                    ],
+              padding: const EdgeInsets.only(top: 25.0),
+              child: Column(
+                children: [
+                  Image.asset(
+                    "images/ic_launcher.png",
+                    width: 50,
                   ),
-                  onPressed: () async {
-                    NidModel.getNidInServer();
-                  },
-                )),
+                  FlatButton(
+                    child: Text("NID登入", style: TextStyle(fontSize: 18)),
+                    onPressed: () async {
+                      NidModel.getNidInServer();
+                    },
+                  ),
+                  FlatButton(
+                    child: Text("訪客登入", style: TextStyle(fontSize: 18)),
+                    onPressed: () async {},
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
       ),

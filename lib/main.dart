@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        // body: BottomNavigationController(),
-        body: Login(),
+        body: BottomNavigationController(),
+        // body: Login(),
       ),
     );
   }
