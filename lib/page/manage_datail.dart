@@ -46,13 +46,13 @@ class ManageDetail extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => ActivityAdd()));
                   },
                 ),
-                RaisedButton(
-                  child: Text("打卡掃描"),
-                  onPressed: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => ScanQrcode()));
-                  },
-                )
+                // RaisedButton(
+                //   child: Text("打卡掃描"),
+                //   onPressed: () {
+                //     Navigator.of(context).push(
+                //         MaterialPageRoute(builder: (context) => ScanQrcode()));
+                //   },
+                // )
               ],
             ),
           ),
