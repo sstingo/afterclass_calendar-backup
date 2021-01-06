@@ -1,5 +1,6 @@
 import 'package:afterclass_calendar/club_service/club_http.dart';
 import 'package:afterclass_calendar/page/activity_add.dart';
+import 'package:afterclass_calendar/qrcode/scanQrcode.dart';
 import 'package:flutter/material.dart';
 
 class ManageDetail extends StatelessWidget {
@@ -43,6 +44,13 @@ class ManageDetail extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => ActivityAdd()));
+                  },
+                ),
+                RaisedButton(
+                  child: Text("打卡掃描"),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => ScanQrcode()));
                   },
                 )
               ],
