@@ -4,6 +4,7 @@ import 'package:afterclass_calendar/account_service/account_model.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:qr_flutter/qr_flutter.dart';
+import 'package:intl/intl.dart';
 
 class Account extends StatelessWidget {
   ScrollController scrollController = ScrollController(
@@ -104,19 +105,25 @@ class Account extends StatelessWidget {
                   leading: Icon(Icons.settings),
                   title: Text("設定"),
                 ),
-                QrImage(
-                  data: "1234567890",
-                  version: QrVersions.auto,
-                  size: 200.0,
-                ),
                 RaisedButton(
                   child: Text('打卡qrcode'),
                   onPressed: () {
+                    var now =
+                        DateFormat('yyyy-MM-dd HH:mm').format(DateTime.now());
                     showDialog(
                         context: context,
                         builder: (BuildContext context) {
                           return AlertDialog(
-                            title: Text("打卡qrcode"),
+                            title: new Text("打卡qrcode"),
+                            content: new Container(
+                              width: MediaQuery.of(context).size.width * 0.5,
+                              // height: MediaQuery.of(context).size.height * 0.5,
+                              child: QrImage(
+                                data: "D0746460," + now,
+                                version: QrVersions.auto,
+                                // size: 200.0,
+                              ),
+                            ),
                             actions: <Widget>[
                               FlatButton(
                                 child: Text("OK"),
